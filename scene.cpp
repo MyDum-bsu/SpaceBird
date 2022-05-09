@@ -96,8 +96,8 @@ void Scene::showGameOverGraphics()
     game_over_pix->setPos(QPoint(570,330) - QPoint(game_over_pix->boundingRect().width() / 2,
                                                game_over_pix->boundingRect().height() / 2));
     score_text_item = new QGraphicsTextItem();
-    QString htmlString = "<p> Score : " + QString::number(score) + "</p>"
-            + "<p> Best Score : " + QString::number(best_score) + "</p>";
+    QString htmlString = "<p> Score : " + QString::number(score - 3) + "</p>"
+            + "<p> Best Score : " + QString::number(best_score - 3) + "</p>";
     QFont mFont("Consolas", 30, QFont::Bold);
     score_text_item->setHtml(htmlString);
     score_text_item->setFont(mFont);
